@@ -1,0 +1,13 @@
+{
+  "framework": "react",
+  "typescript": true,
+  "projectName": ".",
+  "mode": "code-router",
+  "tailwind": false,
+  "packageManager": "bun",
+  "toolchain": "biome",
+  "variableValues": {},
+  "git": true,
+  "version": 1,
+  "existingAddOns": []
+}

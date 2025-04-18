@@ -1,0 +1,288 @@
+/* Импорт полного сброса стилей (современный способ) */
+@use "./_reset" as *;
+@use "./_themes" as *;
+
+// Корректировка базовых стилей для 100% высоты
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// 5. Базовые стили
+html, body {
+  height: 100%;
+  font-family: var(--font-family-main);
+  background: var(--bg-200);
+  color: var(--text-100);
+}
+
+body {
+  background: var(--bg-200);
+  color: var(--text-100);
+}
+
+/* Стили для основного лейаута */
+.app {
+  min-height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Предотвращает выход элементов за пределы контейнера */
+}
+
+.app-header {
+  background-color: var(--bg-100);
+  color: var(--text-100);
+  padding: 1rem 2rem;
+  box-shadow: var(--shadow-sm);
+    
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    color: var(--text-link);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+.app-main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Добавляем скролл при необходимости только для основного контента */
+  background-color: var(--bg-200);
+}
+
+.app-footer {
+  background-color: var(--bg-100);
+  color: var(--text-200);
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Базовые стили ссылок */
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* 6. Стили для демонстрации цветовой палитры */
+.color-palette {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--bg-200);
+  box-shadow: var(--shadow-md);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+  h2,
+  h3 {
+    color: var(--text-100);
+  }
+  
+  h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  h3 {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+}
+
+.palette-group {
+  margin-bottom: 2rem;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Точно 4 элемента в строке */
+  gap: 1rem;
+}
+
+.color-item {
+  background-color: var(--bg-100);
+  height: 100px;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-xs);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.2s ease;
+  
+  .color-sample {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .color-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-100);
+  }
+  
+  .color-hex {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    color: var(--text-200);
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  
+  button {
+    background-color: var(--primary);
+    color: var(--dark-text-100); // Используем переменную для светлого текста
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+      background-color: var(--secondary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+}
+
+/* Стили для демонстрации теней */
+.shadows-demo {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-100); // Изменено с var(--bg-200) на фон для панелей
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  color: var(--text-100);
+}
+
+.shadows-demo h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-100);
+}
+
+.shadows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.shadow-block {
+  background: var(--bg-100);
+  border-radius: 10px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--text-100);
+  transition: box-shadow 0.2s;
+  box-shadow: var(--shadow-xs);
+}
+
+.shadow-label {
+  font-family: var(--font-family-mono);
+  font-size: 0.95rem;
+  color: var(--text-200);
+}
+
+// Примеры базовых стилей для типографики
+.typography-demo {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-100);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  color: var(--text-100);
+}
+
+.typography-demo h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+.typography-demo p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  margin-bottom: 1rem;
+}
+.typography-demo .caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-caption);
+  color: var(--text-200);
+  margin-bottom: 1rem;
+}
+.typography-demo .small {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-caption);
+  color: var(--text-200);
+  margin-bottom: 1rem;
+}
+.typography-demo .mono {
+  font-family: var(--font-family-mono);
+  background: var(--bg-300);
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+  font-size: var(--font-size-body);
+}

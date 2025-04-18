@@ -1,0 +1,109 @@
+@use "./colors" as *;
+@use "./_typography" as *;
+@use "./_shadows" as *;
+
+// Проброс переменных в CSS для светлой темы (default)
+:root {
+  // Фоновые цвета для интерфейса
+  --bg-100: #{$bg-light-100}; // Боковые панели, панели инфо сообщений, фон для хедера и футера
+  --bg-200: #{$bg-light-200}; // Основной фон
+  --bg-300: #{$bg-light-300}; // Край градиента
+  --bg-400: #{$bg-light-400}; // Выделение бесцветных кнопок
+  --bg-500: #{$bg-light-500}; // Инфо элементы
+  
+  --bg-gradient-from-100: #{$bg-light-200};
+  --bg-gradient-to-100: #{$bg-light-300};
+  --bg-surface-100: #{$bg-light-100};
+  --border-100: #{$bg-light-400}; // границы на панелях
+  --border-200: #{$bg-light-100}; // границы на основном фоне
+  
+  // Текстовые цвета
+  --text-100: #{$text-100}; // Основной черный текст
+  --text-200: #{$text-200}; // Серый вспомогательный текст
+  --text-primary: #{$text-primary}; // Акцентный текст (синий)
+  --text-secondary: #{$text-secondary}; // Дополнительный акцентный текст (фиолетовый)
+  --text-success: #{$text-success}; // Текст успеха (зеленый)
+  --text-warning: #{$text-warning}; // Текст предупреждения (желтый)
+  --text-error: #{$text-error}; // Текст ошибки (красный)
+  --text-info: #{$text-info}; // Информационный текст (светло-синий)
+  --text-link: #{$text-link}; // Текст ссылок (темно-синий)
+  
+  // Основные цвета
+  --primary: #{$primary}; // primary - голубой
+  --secondary: #{$secondary}; // secondary - пурпурный
+  
+  // Градиенты
+  --gradient-red-from: #{$gradient-red-from};
+  --gradient-red-to: #{$gradient-red-to};
+  --gradient-blue-from: #{$gradient-blue-from};
+  --gradient-blue-to: #{$gradient-blue-to};
+  --gradient-yellow-from: #{$gradient-yellow-from};
+  --gradient-yellow-to: #{$gradient-yellow-to};
+  --gradient-green-from: #{$gradient-green-from};
+  --gradient-green-to: #{$gradient-green-to};
+
+  // Тени
+  --shadow-xs: #{$shadow-xs};
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-xl: #{$shadow-xl};
+  
+  // Типографика
+  --font-family-main: #{$font-family-main};
+  --font-family-mono: #{$font-family-mono};
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h5: #{$font-size-h5};
+  --font-size-h6: #{$font-size-h6};
+  --font-size-body: #{$font-size-body};
+  --font-size-caption: #{$font-size-caption};
+  --font-size-small: #{$font-size-small};
+  --font-weight-bold: #{$font-weight-bold};
+  --font-weight-semibold: #{$font-weight-semibold};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-regular: #{$font-weight-regular};
+  --line-height-title: #{$line-height-title};
+  --line-height-body: #{$line-height-body};
+  --line-height-caption: #{$line-height-caption};
+}
+
+// Темная тема
+.dark-theme {
+  // Фоновые цвета для интерфейса темной темы
+  --bg-100: #{$bg-dark-100}; // Боковые панели, панели инфо сообщений, фон для хедера и футера
+  --bg-200: #{$bg-dark-200}; // Основной фон
+  --bg-300: #{$bg-dark-300}; // Край градиента
+  --bg-400: #{$bg-dark-400}; // Выделение бесцветных кнопок
+  --bg-500: #{$bg-dark-500}; // Инфо элементы
+  
+  --bg-gradient-from-100: #{$bg-dark-200};
+  --bg-gradient-to-100: #{$bg-dark-300};
+  --bg-surface-100: #{$bg-dark-100};
+  --border-100: #{$bg-dark-400}; // границы на панелях
+  --border-200: #{$bg-dark-500}; // границы на основном фоне
+  
+  // Текстовые цвета для темной темы
+  --text-100: #{$dark-text-100}; // Основной светлый текст (не совсем белый)
+  --text-200: #{$dark-text-200}; // Серый вспомогательный текст
+  --text-primary: #{$text-primary}; // Акцентный текст (синий)
+  --text-secondary: #{$text-secondary}; // Дополнительный акцентный текст (фиолетовый)
+  --text-success: #{$text-success}; // Текст успеха (зеленый) 
+  --text-warning: #{$text-warning}; // Текст предупреждения (желтый)
+  --text-error: #{$text-error}; // Текст ошибки (красный)
+  --text-info: #{$text-info}; // Информационный текст (светло-синий)
+  --text-link: #{$blue-light}; // Текст ссылок (светло-синий для темной темы)
+  
+  // Основные цвета
+  --primary: #{$primary}; // primary - голубой
+  --secondary: #{$secondary}; // secondary - пурпурный
+
+  // Тени для темной темы
+  --shadow-xs: #{$shadow-dark-xs};
+  --shadow-sm: #{$shadow-dark-sm};
+  --shadow-md: #{$shadow-dark-md};
+  --shadow-lg: #{$shadow-dark-lg};
+  --shadow-xl: #{$shadow-dark-xl};
+}

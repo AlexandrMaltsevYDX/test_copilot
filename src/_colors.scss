@@ -1,0 +1,70 @@
+/* 2. Цветовая палитра из Figma (node-id=7262-45182) */
+
+// Основные цвета действий
+$color-blue: #2388FF;       // Было $primary-100
+$color-red: #FF2D46;        // Было $primary-200
+$color-yellow: #FFC700;     // Было $primary-300
+$color-green: #63DE77;      // Было $primary-400
+
+// Альтернативные оттенки и вариации (прежние secondary)
+$blue-deep: #1777E7;      // Было $secondary-100
+$blue-light-bg: #F6FAFF;  // Было $secondary-200
+$purple: #6D39E4;         // Было $secondary-300
+$purple-light-bg: #F2ECFF;// Было $secondary-400
+$pink: #FF649C;           // Было $secondary-500
+$pink-light-bg: #FFEFF5;  // Было $secondary-600
+$blue-light: #3AACFF;     // Было $secondary-700
+$blue-pale-bg: #DBF0FF;   // Было $secondary-800
+
+// Текстовые цвета
+$text-100: #343A40;       // Основной черный текст (не совсем черный, с легким оттенком)
+$text-200: #6C757D;       // Серый текст для второстепенной информации
+$text-primary: $color-blue;   // Основной акцентный текст
+$text-secondary: $blue-light;     // Дополнительный акцентный текст
+$text-success: $color-green;  // Текст для успешных действий
+$text-warning: $color-yellow; // Текст для предупреждений
+$text-error: $color-red;      // Текст для ошибок
+$text-info: $purple;      // Текст для информационных сообщений
+$text-link: $blue-deep;       // Текст для ссылок
+
+// Текстовые цвета для темной темы
+$dark-text-100: #E9ECEF;   // Основной белый текст (но не совсем белый)
+$dark-text-200: #ADB5BD;   // Серый текст для второстепенной информации
+
+// Background (Light) 
+$bg-light-100: #e4e8f1; // Боковые панели, панели инфо сообщений, фон для хедера и футера
+$bg-light-200: #ffffff; // Основной фон
+$bg-light-300: #dce8ff; // Край градиента
+$bg-light-400: #353e5c; // Выделение бесцветных кнопок
+$bg-light-500: #49557a; // Инфо элементы
+
+// Background (Dark) (без изменений)
+$bg-dark-100: #23283d; // Боковые панели, панели инфо сообщений, фон для хедера и футера
+$bg-dark-200: #141828; // Основной фон
+$bg-dark-300: #17264a; // Край градиента
+$bg-dark-400: #353e5c; // Выделение бесцветных кнопок
+$bg-dark-500: #49557a; // Инфо элементы
+
+
+// Градиенты (HEX диапазоны) (без изменений)
+$gradient-red-from: #DF001B;
+$gradient-red-to: #FFDDDF;
+$gradient-blue-from: #0075FF;
+$gradient-blue-to: #D0EBFF;
+$gradient-yellow-from: #FF9416;
+$gradient-yellow-to: #FFE03A;
+$gradient-green-from: #3ACD52;
+$gradient-green-to: #7DFFA2;
+
+// Для обеспечения обратной совместимости 
+// (эти переменные можно будет постепенно удалить после обновления всех компонентов)
+$primary: $color-blue;
+$secondary: $blue-light;
+
+
+// Семантические цвета для UI
+$color-success: $color-green;
+$color-warning: $color-yellow;
+$color-error: $color-red;
+$color-info: $color-blue;
+$color-link: $blue-deep;

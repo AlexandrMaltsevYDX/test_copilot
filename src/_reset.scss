@@ -1,0 +1,139 @@
+/* 
+  Modern CSS Reset 
+  Основано на: 
+  - https://piccalil.li/blog/a-modern-css-reset/
+  - https://github.com/elad2412/the-new-css-reset
+  - https://meyerweb.com/eric/tools/css/reset/
+*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Сброс отступов */
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd,
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Базовые стили для html и body */
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Списки без стилей по умолчанию */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Корректная работа с a11y элементами */
+[role="button"],
+button {
+  cursor: pointer;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Изображения */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Удаление анимации для людей с включенным prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Таблицы */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Формы */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Убираем подсветку кликабельных элементов в iOS */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/* Корректное заполнение */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* Сброс стилей для ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Наследование шрифтов для полей форм */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Сброс для интерактивных элементов */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 0;
+}
+
+/* Исправление вертикального выравнивания для аудио, видео, iframe и canvas */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
