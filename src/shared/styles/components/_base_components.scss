@@ -1,0 +1,53 @@
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-title);
+  margin-bottom: 1rem;
+}
+p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  margin-bottom: 1rem;
+}
+a {
+  color: var(--text-link);
+  text-decoration: none;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  margin-bottom: 1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}

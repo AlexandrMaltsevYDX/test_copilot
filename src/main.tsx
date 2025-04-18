@@ -1,7 +1,5 @@
 import {
 	RouterProvider,
-	createRootRoute,
-	createRoute,
 	createRouter,
 } from "@tanstack/react-router";
 import { StrictMode } from "react";
@@ -10,31 +8,8 @@ import ReactDOM from "react-dom/client";
 import "./styles.scss";
 import reportWebVitals from "./reportWebVitals.ts";
 
-import App, { TypographyPage, AppLayout, ShadowsPage } from "./App.tsx";
 
-const rootRoute = createRootRoute({
-	component: AppLayout,
-});
-
-const indexRoute = createRoute({
-	getParentRoute: () => rootRoute,
-	path: "/",
-	component: App,
-});
-
-const typographyRoute = createRoute({
-	getParentRoute: () => rootRoute,
-	path: "/typography",
-	component: TypographyPage,
-});
-
-const shadowsRoute = createRoute({
-	getParentRoute: () => rootRoute,
-	path: "/shadows",
-	component: ShadowsPage,
-});
-
-const routeTree = rootRoute.addChildren([indexRoute, typographyRoute, shadowsRoute]);
+import { routeTree } from "./app/routing/routes";
 
 const router = createRouter({
 	routeTree,

@@ -2,23 +2,13 @@
 @use "./shared/styles/app/_reset" as *;
 @use "./shared/styles/app/_themes" as *;
 @use "./shared/styles/layouts/layout_index" as *;
-
+@use "./shared/styles/components/_base_components.scss" as *;
 
 .app-header {
   background-color: var(--bg-100);
   color: var(--text-100);
   padding: 1rem 2rem;
   box-shadow: var(--shadow-sm);
-    
-  h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    color: var(--text-link);
-    font-weight: var(--font-weight-medium);
-  }
 }
 
 .app-main {
@@ -38,15 +28,6 @@
   font-size: 0.9rem;
 }
 
-/* Базовые стили ссылок */
-a {
-  color: var(--text-link);
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
 /* 6. Стили для демонстрации цветовой палитры */
 .color-palette {
   max-width: 960px;
@@ -56,22 +37,6 @@ a {
   background-color: var(--bg-200);
   box-shadow: var(--shadow-md);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  
-  h2,
-  h3 {
-    color: var(--text-100);
-  }
-  
-  h2 {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  
-  h3 {
-    margin: 1rem 0;
-    font-size: 1.4rem;
-  }
 }
 
 .palette-group {
@@ -194,68 +159,4 @@ a {
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   color: var(--text-100);
-}
-
-.typography-demo h1 {
-  font-size: var(--font-size-h1);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo h2 {
-  font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo h3 {
-  font-size: var(--font-size-h3);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo h4 {
-  font-size: var(--font-size-h4);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo h5 {
-  font-size: var(--font-size-h5);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo h6 {
-  font-size: var(--font-size-h6);
-  font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-title);
-  margin-bottom: 1rem;
-}
-.typography-demo p {
-  font-size: var(--font-size-body);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-body);
-  margin-bottom: 1rem;
-}
-.typography-demo .caption {
-  font-size: var(--font-size-caption);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-caption);
-  color: var(--text-200);
-  margin-bottom: 1rem;
-}
-.typography-demo .small {
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-regular);
-  line-height: var(--line-height-caption);
-  color: var(--text-200);
-  margin-bottom: 1rem;
-}
-.typography-demo .mono {
-  font-family: var(--font-family-mono);
-  background: var(--bg-300);
-  padding: 0.25em 0.5em;
-  border-radius: 4px;
-  font-size: var(--font-size-body);
 }
