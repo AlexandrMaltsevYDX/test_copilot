@@ -1,11 +1,11 @@
-import AppLayout from "@/app/layouts/AppLayout";
+import AppGridLayout from "@/app/layouts/chat/AppGridLayout";
 import PalettePage from "@/pages/PalettePage/PalettePage";
 import ShadowsPage from "@/pages/ShadowsPage/ShadowsPage";
 import TypographyPage from "@/pages/TypographyPage/TypographyPage";
 import { createRootRoute, createRoute } from "@tanstack/react-router";
 
 const rootRoute = createRootRoute({
-	component: AppLayout,
+	component: AppGridLayout,
 });
 
 const indexRoute = createRoute({
