@@ -1,16 +1,24 @@
 import { FaReact } from "react-icons/fa";
 
-const MainBar: React.FC = () => (
+interface MainBarProps {
+  onActionClick?: () => void;
+}
+
+const MainBar: React.FC<MainBarProps> = ({ onActionClick }) => (
   <nav className="main-bar">
     {/* Actions (icons) */}
     <div className="main-bar__actions">
-      <div className="main-bar__action">
+      <button
+        className="main-bar__action"
+        onClick={onActionClick}
+        type="button"
+      >
         <div className="action__icon_empty">
           <FaReact />
         </div>
         <div className="action__label">Chats</div>
         <div className="action__icon">⌘ 1</div>
-      </div>
+      </button>
       <div className="main-bar__action">
         <div className="action__icon_empty">
           <FaReact />

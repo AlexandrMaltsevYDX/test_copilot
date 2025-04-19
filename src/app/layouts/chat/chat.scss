@@ -2,9 +2,9 @@
 
 .app-grid-layout {
   display: grid;
+  min-height: 100vh;
   grid-template-columns: minmax(296px, 18vw) minmax(372px, 18vw) 1fr minmax(220px, 22vw);
   grid-template-areas: "main-bar left-deck central right-deck";
-  min-height: 100vh;
   background: var(--bg-100);
 }
 
